@@ -18,9 +18,9 @@ import './style.css'
 
     // === logo change
     if (ud_header.classList.contains("sticky")) {
-      logo.src = "/assets/logo-fb267e3a.svg";
+      logo.src = "assets/logo.svg";
     } else {
-      logo.src = "/assets/logo-fb267e3a.svg";
+      logo.src = "assets/logo.svg";
     }
     // show or hide the back-top-top button
     const backToTop = document.querySelector(".back-to-top");
