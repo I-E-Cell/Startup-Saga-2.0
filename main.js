@@ -584,7 +584,7 @@ import './style.css'
 });
 
 
-
+// js for countdown timer
 const countDownClock = (number = 100, format = 'seconds') => {
 
   const d = document;
