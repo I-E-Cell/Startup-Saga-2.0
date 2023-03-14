@@ -4,16 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Startup Saga</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/images/favicon.png"
+      type="image/x-icon"
+    />
+   
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <link rel="stylesheet" href="/style.css">
 
-    <script>
-      new WOW().init();
-    </script>
+   
   </head>
   <body>
     <!-- ====== Navbar Section Start -->
-    <div
+    <div id="nav"
       class="ud-header absolute top-0 left-0 z-40 flex w-full items-center bg-transparent"
     >
       <div class="container">
@@ -21,7 +26,7 @@
           <div class="w-60 max-w-full px-4">
             <a href="index.html" class="navbar-logo block w-full py-5">
               <img
-                src="assets/images/logo/logo.svg"
+                src="/assets/images/logo/logo.svg"
                 alt="logo"
                 class="header-logo w-10 h-10"
               />
@@ -2864,7 +2869,7 @@
 
     <!-- ====== Back To Top Start -->
     <a
-      href="javascript:void(0)"
+      href="#nav"
       class="back-to-top fixed bottom-8 right-8 left-auto z-[999] hidden h-10 w-10 items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-dark"
     >
       <span
@@ -2877,8 +2882,8 @@
 
     
     
-    <script src="./main.js"></script>
-    <script src="./utility.js"></script>
+    
+    
     <script>
       // ==== for menu scroll
       const pageLink = document.querySelectorAll(".ud-menu-scroll");
@@ -2925,5 +2930,6 @@
   
 
     <script type="module" src="/main.js"></script>
+    <script type="module" src="/utility.js"></script>
   </body>
 </html>
