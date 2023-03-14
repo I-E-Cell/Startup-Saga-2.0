@@ -18,9 +18,9 @@ import './style.css'
 
     // === logo change
     if (ud_header.classList.contains("sticky")) {
-      logo.src = "/assets/images/logo/logo.svg";
+      logo.src = "/assets/images/favicon.png";
     } else {
-      logo.src = "/assets/images/logo/logo.svg";
+      logo.src = "/assets/images/favicon.png";
     }
 
     // show or hide the back-top-top button
