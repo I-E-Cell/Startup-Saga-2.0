@@ -271,7 +271,7 @@
   width: 600px;
   justify-content: center;
   align-items: center;
-  
+  z-index: 20;
   
 }
 
@@ -284,6 +284,7 @@
   align-items: center;
   height: 600px;
   width: 600px;
+  z-index: 20;
   
   top: 0;
   
