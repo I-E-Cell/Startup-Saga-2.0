@@ -94,7 +94,7 @@
                       href="#FAQ"
                       class="ud-menu-scroll mx-8 flex py-2 text-base text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12"
                     >
-                      FAQ
+                      FAQs
                     </a>
                   </li>
                   <li class="group relative">
@@ -139,6 +139,15 @@
       id="home"
       class="relative overflow-hidden bg-primary pt-[120px] md:pt-[130px] lg:pt-[160px]"
     >
+    <div id="aSide">
+
+              
+      <!-- <model-viewer src="/starg.gltf" ar shadow-intensity="1" camera-controls touch-action="pan-y" style = "z-index: 20;" auto-rotate >
+
+      </model-viewer> -->
+      <model-viewer src="assets/star v0.glb" style = "z-index: 20;" alt="/assets/images/favicon.png" auto-rotate >
+      </model-viewer>
+    </div> 
     
       <div class="container">
         <div class="-mx-4 flex flex-wrap items-center">
@@ -148,15 +157,7 @@
               data-wow-delay=".2s"
             >
 
-            <div id="aSide">
-
-              
-              <!-- <model-viewer src="/starg.gltf" ar shadow-intensity="1" camera-controls touch-action="pan-y" style = "z-index: 20;" auto-rotate >
-
-              </model-viewer> -->
-              <model-viewer src="starg.gltf" style = "z-index: 20;" alt="/assets/images/favicon.png" auto-rotate >
-              </model-viewer>
-            </div> 
+            
               <h1
                 class="mb-8 text-[50px] leading-3 row-span-2 font-bold text-white sm:text-6xl sm:leading-snug md:text-[45px] md:leading-snug text-center xl:text-[50px]"
               >
@@ -2369,18 +2370,21 @@
               "
             >
               <h3 class="mb-8 text-2xl font-semibold md:text-[26px]">
-                Fill the form to sponsor us
+                Fill the form to reach out to us
               </h3>
-              <form>
+              <form action="" id="sponsorForm">
+                <div class="alert">Your Message was sent</div>  
                 <div class="mb-6">
                   <label for="fullName" class="block text-xs text-dark"
                     >Company Name*</label
                   >
                   <input
                     type="text"
+                    id="name"
                     name="fullName"
                     placeholder="Devfolio"
                     class="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
+                    required
                   />
                 </div>
                 <div class="mb-6">
@@ -2389,9 +2393,11 @@
                   >
                   <input
                     type="email"
+                    id="email"
                     name="email"
                     placeholder="example@yourmail.com"
                     class="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
+                    required
                   />
                 </div>
                 <div class="mb-6">
@@ -2401,8 +2407,10 @@
                   <input
                     type="text"
                     name="phone"
+                    id="phoneno"
                     placeholder="+885 1254 5211 552"
                     class="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
+                    required
                   />
                 </div>
                 <div class="mb-6">
@@ -2412,6 +2420,7 @@
                   <textarea
                     name="message"
                     rows="1"
+                    id="message"
                     placeholder="type your message here"
                     class="w-full resize-none border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
                   ></textarea>
@@ -2851,54 +2860,12 @@
 
     
     
-    
-    
-    <script>
-      // ==== for menu scroll
-      const pageLink = document.querySelectorAll(".ud-menu-scroll");
-
-      pageLink.forEach((elem) => {
-        elem.addEventListener("click", (e) => {
-          e.preventDefault();
-          document.querySelector(elem.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-            offsetTop: 1 - 60,
-          });
-        });
-      });
-
-      // section menu active
-      function onScroll(event) {
-        const sections = document.querySelectorAll(".ud-menu-scroll");
-        const scrollPos =
-          window.pageYOffset ||
-          document.documentElement.scrollTop ||
-          document.body.scrollTop;
-
-        for (let i = 0; i < sections.length; i++) {
-          const currLink = sections[i];
-          const val = currLink.getAttribute("href");
-          const refElement = document.querySelector(val);
-          const scrollTopMinus = scrollPos + 73;
-          if (
-            refElement.offsetTop <= scrollTopMinus &&
-            refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
-          ) {
-            document
-              .querySelector(".ud-menu-scroll")
-              .classList.remove("active");
-            currLink.classList.add("active");
-          } else {
-            currLink.classList.remove("active");
-          }
-        }
-      }
-
-      window.document.addEventListener("scroll", onScroll);
-    </script>
-  
-
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script type="module" src="/main.js"></script>
     <script type="module" src="/utility.js"></script>
+    <script type="module" src="/mail.js"></script>
+    
+   
   </body>
 </html>

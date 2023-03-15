@@ -3146,3 +3146,17 @@ body {
 }
 
 
+.alert{
+  width:100%;
+  background-color: #3056d3;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #ebeffd;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  display: none;
+  justify-content: center;
+  margin-bottom: 15px;
+
+}
