@@ -267,29 +267,30 @@
 /* This styles the aside container */
 
 #aSide {
-  height: 600px;
-  width: 600px;
-  justify-content: center;
-  align-items: center;
-  z-index: 20;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -20px;
+    z-index:10
+  }
   
-}
+  
+  /* This styles the 3D object inserted in the aside container */
+  
+  #aSide model-viewer {
+    height: 40vh;
+    width: 60vw;
+    top: 0px;
+    left: 0;
+    border: none;
+  }
+  .show{
+    top: -60px;
+  }
+  
 
 
-/* This styles the 3D object inserted in the aside container */
-
-#aSide model-viewer {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  height: 600px;
-  width: 600px;
-  z-index: 20;
-  
-  top: 0;
-  
-  border: none;
-}
 
 
 /*
